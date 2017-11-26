@@ -1,0 +1,6 @@
+framework module Pods_StarWarsPracticeTests {
+  umbrella header "Pods-StarWarsPracticeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
