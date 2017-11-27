@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BF363911FC54792002BB67A /* StarWarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363901FC54792002BB67A /* StarWarsDetailViewController.swift */; };
 		2BF363931FC62964002BB67A /* StarWarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363921FC62964002BB67A /* StarWarsViewModel.swift */; };
 		2BF363951FC642CC002BB67A /* StarWarsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363941FC642CC002BB67A /* StarWarsDataManager.swift */; };
 		2BF3639B1FC66BCE002BB67A /* FilmMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363991FC66BCE002BB67A /* FilmMenuViewController.swift */; };
@@ -20,7 +19,7 @@
 		2BF363AA1FC68616002BB67A /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363A81FC68616002BB67A /* FilmDetailViewController.xib */; };
 		2BF363B81FC77EA7002BB67A /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363B61FC77EA7002BB67A /* PersonDetailViewController.swift */; };
 		2BF363B91FC77EA7002BB67A /* PersonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363B71FC77EA7002BB67A /* PersonDetailViewController.xib */; };
-		2BF363BE1FC7D322002BB67A /* ObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363BD1FC7D322002BB67A /* ObjectModel.swift */; };
+		2BF363C01FCB8458002BB67A /* StarWarsOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BF363BF1FCB8457002BB67A /* StarWarsOptionsViewController.xib */; };
 		2BFCEEE11FC3D6C000480578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCEEE01FC3D6C000480578 /* AppDelegate.swift */; };
 		2BFCEEE31FC3D6C000480578 /* StarWarsMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCEEE21FC3D6C000480578 /* StarWarsMainViewController.swift */; };
 		2BFCEEE61FC3D6C000480578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFCEEE41FC3D6C000480578 /* Main.storyboard */; };
@@ -57,7 +56,6 @@
 
 /* Begin PBXFileReference section */
 		05849D4ABB1805697F0D76BB /* Pods-StarWarsPracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsPracticeUITests/Pods-StarWarsPracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2BF363901FC54792002BB67A /* StarWarsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsDetailViewController.swift; sourceTree = "<group>"; };
 		2BF363921FC62964002BB67A /* StarWarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewModel.swift; sourceTree = "<group>"; };
 		2BF363941FC642CC002BB67A /* StarWarsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsDataManager.swift; sourceTree = "<group>"; };
 		2BF363991FC66BCE002BB67A /* FilmMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmMenuViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +68,7 @@
 		2BF363A81FC68616002BB67A /* FilmDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmDetailViewController.xib; sourceTree = "<group>"; };
 		2BF363B61FC77EA7002BB67A /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		2BF363B71FC77EA7002BB67A /* PersonDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonDetailViewController.xib; sourceTree = "<group>"; };
-		2BF363BD1FC7D322002BB67A /* ObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModel.swift; sourceTree = "<group>"; };
+		2BF363BF1FCB8457002BB67A /* StarWarsOptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarWarsOptionsViewController.xib; sourceTree = "<group>"; };
 		2BFCEEDD1FC3D6C000480578 /* StarWarsPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFCEEE01FC3D6C000480578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BFCEEE21FC3D6C000480578 /* StarWarsMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsMainViewController.swift; sourceTree = "<group>"; };
@@ -186,18 +184,10 @@
 				2BFCEEE21FC3D6C000480578 /* StarWarsMainViewController.swift */,
 				2BF363921FC62964002BB67A /* StarWarsViewModel.swift */,
 				2BFCEF121FC3E90500480578 /* StarWarsOptionsViewController.swift */,
-				2BF363BD1FC7D322002BB67A /* ObjectModel.swift */,
+				2BF363BF1FCB8457002BB67A /* StarWarsOptionsViewController.xib */,
 				2BFCEEE41FC3D6C000480578 /* Main.storyboard */,
 			);
 			path = Menus;
-			sourceTree = "<group>";
-		};
-		2BF363BC1FC7CDFD002BB67A /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				2BF363901FC54792002BB67A /* StarWarsDetailViewController.swift */,
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 		2BFCEED41FC3D6C000480578 = {
@@ -257,7 +247,6 @@
 		2BFCEF1A1FC4E29800480578 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2BF363BC1FC7CDFD002BB67A /* Other */,
 				2BF363BB1FC7CDEA002BB67A /* Menus */,
 				2BF363961FC66A4A002BB67A /* ObjectViews */,
 			);
@@ -407,6 +396,7 @@
 				2BF363A01FC66BD8002BB67A /* PersonMenuViewController.xib in Resources */,
 				2BFCEEE81FC3D6C000480578 /* Assets.xcassets in Resources */,
 				2BF363B91FC77EA7002BB67A /* PersonDetailViewController.xib in Resources */,
+				2BF363C01FCB8458002BB67A /* StarWarsOptionsViewController.xib in Resources */,
 				2BF3639C1FC66BCE002BB67A /* FilmMenuViewController.xib in Resources */,
 				2BFCEEE61FC3D6C000480578 /* Main.storyboard in Resources */,
 				2BF363AA1FC68616002BB67A /* FilmDetailViewController.xib in Resources */,
@@ -589,8 +579,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BFCEEE31FC3D6C000480578 /* StarWarsMainViewController.swift in Sources */,
-				2BF363BE1FC7D322002BB67A /* ObjectModel.swift in Sources */,
-				2BF363911FC54792002BB67A /* StarWarsDetailViewController.swift in Sources */,
 				2BFCEF211FC4F90C00480578 /* PersonMenuViewModel.swift in Sources */,
 				2BF363A91FC68616002BB67A /* FilmDetailViewController.swift in Sources */,
 				2BFCEF231FC51DD100480578 /* FilmMenuViewModel.swift in Sources */,

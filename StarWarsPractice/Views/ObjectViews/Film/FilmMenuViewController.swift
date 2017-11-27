@@ -10,7 +10,9 @@ import UIKit
 import Foundation
 import NVActivityIndicatorView
 
-class FilmMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, optionsViewDelegate, NVActivityIndicatorViewable {
+// DEPRECIATED
+
+class FilmMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NVActivityIndicatorViewable {
   
   let viewModel = FilmMenuViewModel()
   
@@ -20,9 +22,6 @@ class FilmMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    viewModel.delegate = self
-    viewModel.refreshData()
     
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     

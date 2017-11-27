@@ -8,57 +8,16 @@
 
 import UIKit
 
-protocol optionsViewDelegate: class {
-  func refreshView()
-}
-
 class StarWarsViewModel: NSObject {
-
-  weak var delegate: optionsViewDelegate?
-  var models = NSArray()
   
-  func getObjectModelForIndex(index: Int) -> ObjectModel {
+  func getOptionsVCWithDelegateForType(type: String) -> Any {
     
-    if index == 0 {
+    if type == "Films" {
       return FilmMenuViewModel()
     }
-    else {
+    else { //if type == "People" {
+      // Add more security here so we can return nil if we don't have the object type
       return PersonMenuViewModel()
     }
   }
-  
-  func getOptionsVCWithDelegateForType(type: String) -> UIViewController {
-    
-    let vc = StarWarsOptionsViewController()
-    
-    if type == "Films" {
-      vc.delegate = FilmMenuViewModel()
-    }
-    else if type == "People" {
-      vc.delegate = PersonMenuViewModel()
-    }
-    
-    return vc
-  }
-  
-  func refreshData() {
-    self.delegate?.refreshView()
-  }
-//
-//  func getNumberOfRowsInSection(section: Int) -> Int {
-//    return models.count
-//  }
-//  
-//  func getNumberOfSections() -> Int {
-//    return 1
-//  }
-//  
-//  func getPrimaryText() -> String {
-//    return "Primary"
-//  }
-//  
-//  func getSecondaryText() -> String {
-//    return "Secondary"
-//  }
-  
 }

@@ -45,9 +45,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="b61-2g-3QP" kind="show" identifier="optionsPushSegue" id="XCY-Kh-uGh"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -73,68 +70,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cB-Pb-RLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-847.20000000000005" y="43.628185907046479"/>
-        </scene>
-        <!--Star Wars Options View Controller-->
-        <scene sceneID="AyD-C3-Bam">
-            <objects>
-                <viewController id="b61-2g-3QP" customClass="StarWarsOptionsViewController" customModule="StarWarsPractice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LrB-cM-N2Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vIY-zS-dC3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="m5T-r2-svD">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m5T-r2-svD" id="ttf-eA-Rnd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="q24-8P-Tp2" kind="show" identifier="detailsPushSegue" id="xg4-sA-Ue0"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="b61-2g-3QP" id="MXL-Xt-GZQ"/>
-                                    <outlet property="delegate" destination="b61-2g-3QP" id="IPN-Jb-S9m"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="vIY-zS-dC3" firstAttribute="leading" secondItem="4eZ-hn-8s3" secondAttribute="leading" id="S0Z-hM-BPs"/>
-                            <constraint firstItem="vIY-zS-dC3" firstAttribute="trailing" secondItem="4eZ-hn-8s3" secondAttribute="trailing" id="Z8b-g8-uNr"/>
-                            <constraint firstItem="4eZ-hn-8s3" firstAttribute="bottom" secondItem="vIY-zS-dC3" secondAttribute="bottom" id="doE-Dq-fOq"/>
-                            <constraint firstItem="vIY-zS-dC3" firstAttribute="top" secondItem="LrB-cM-N2Z" secondAttribute="top" id="nJh-5y-an7"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="4eZ-hn-8s3"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="vIY-zS-dC3" id="gtr-IT-ptn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W09-b9-XMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-127.2" y="43.628185907046479"/>
-        </scene>
-        <!--Star Wars Detail View Controller-->
-        <scene sceneID="sLL-Hc-eP6">
-            <objects>
-                <viewController id="q24-8P-Tp2" customClass="StarWarsDetailViewController" customModule="StarWarsPractice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sea-Wa-IuT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="6o9-In-dJj"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NzB-J6-Du0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="604" y="44"/>
         </scene>
     </scenes>
 </document>

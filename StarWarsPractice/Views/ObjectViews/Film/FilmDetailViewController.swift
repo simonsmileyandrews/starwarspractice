@@ -29,7 +29,8 @@ class FilmDetailViewController: UIViewController {
     crawlTextView.text = filmModel.openingCrawlText
     crawlTextView .setContentOffset(CGPoint(x: 0, y: -100), animated: false)
   }
-  
+
+// Film description autoscroll like in films
 //  @objc func autoscrollFired() {
 //
 //    var scrollPoint = crawlTextView.contentOffset

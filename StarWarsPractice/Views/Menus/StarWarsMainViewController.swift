@@ -48,77 +48,19 @@ class StarWarsMenuViewController: UIViewController, UITableViewDelegate, UITable
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return titles.count
-    
-//    if (starWarsData.count > 0) {
-//      return starWarsData.count
-//    }
-//    else {
-//      return 0
-//    }
   }
     
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-//    let vc = model.getOptionsVCWithDelegateForType(type: titles[indexPath.row])
-//    self.navigationController?.pushViewController(vc, animated: true)
+    let delegate = model.getOptionsVCWithDelegateForType(type: titles[indexPath.row])
     
-    // We want to push the correct view controller based on the menu here
-//    var vc: UIViewController?
-//
-//    let title = titles[indexPath.row]
-//
-//    if title.range(of:"Films") != nil {
-//      vc = FilmMenuViewController()
-//    }
-//    else if title.range(of:"People") != nil {
-//      vc = PersonMenuViewController()
-//    }
-//
-//    if let viewController = vc {
-//      self.navigationController?.pushViewController(viewController, animated: true)
-//    }
-  
+    let vc = StarWarsOptionsViewController()
+
+    vc.delegate = delegate as? optionsMenuDelegate
     
-    // Segue to the OptionsViewController and set the delegate model in the options
-    self.performSegue(withIdentifier: "optionsPushSegue", sender: self)
-    
-    
+    self.navigationController?.pushViewController(vc, animated: true)
     
     tableView.deselectRow(at: indexPath, animated: true)
-  }
-
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "optionsPushSegue" {
-      
-      if let indexPath = tableView.indexPathForSelectedRow {
-        let selectedRow = indexPath.row
-        
-        let vc = segue.destination as! StarWarsOptionsViewController
-
-        // We want to get the object model based on what was clicked
-        vc.viewModel = model.getObjectModelForIndex(index: selectedRow)
-        
-        
-        //let title = starWarsData[selectedRow] as! String
-
-        // We want to set the view model here
-        
-        //if title.range(of:"films") != nil {
-
-          //vc.type = .starWarsTypeFilms
-          //let url = URL(string: data.object(forKey: "films") as! String)
-          //model = FilmsViewModel.init(film: Film())
-          //model = FilmsViewModel(URL: url!)
-//        }
-//        else if title.range(of:"people") != nil {
-        
-          //vc.type = .starWarsTypePeople
-          //model = PersonDetailViewModel.init(person: Person())
-//          let url = URL(string: data.object(forKey: "people") as! String)
-//          model = PeopleViewModel(URL: url!)
-//        }
-      }
-    }
   }
 }
 

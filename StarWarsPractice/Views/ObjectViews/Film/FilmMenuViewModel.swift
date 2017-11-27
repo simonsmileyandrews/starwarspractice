@@ -8,15 +8,14 @@
 
 import UIKit
 
-class FilmMenuViewModel: ObjectModel, optionsMenuDelegate {
+class FilmMenuViewModel: NSObject, optionsMenuDelegate {
   
-  //weak var delegate: optionsViewDelegate?
   var filmModels = [FilmDetailViewModel]()
   
   var numberOfSections: Int = 0
   var rowsPerSection: [Int] = [0]
   
-  override func refreshData() {
+  func refreshData(completionHandler: @escaping (NSArray) -> ()) {
     
     StarWarsDataManager.sharedInstance.getObjectsWithType(type: .starWarsTypeFilms) { (films) in
       
@@ -32,7 +31,7 @@ class FilmMenuViewModel: ObjectModel, optionsMenuDelegate {
       self.rowsPerSection = [films.count]
       self.numberOfSections = 1
       
-      self.delegate?.refreshView()
+      completionHandler(films)
     }
   }
   
@@ -40,7 +39,7 @@ class FilmMenuViewModel: ObjectModel, optionsMenuDelegate {
     filmModels = filmModels.sorted(by: {$0.releaseDateValue!.intValue < $1.releaseDateValue!.intValue})
   }
   
-  override var loadingString: String? {
+  func getLoadingString() -> String {
     return "Loading Films..."
   }
   
@@ -48,33 +47,40 @@ class FilmMenuViewModel: ObjectModel, optionsMenuDelegate {
     return filmModels[index]
   }
   
-  override func getPrimaryTextWithIndex(index: Int) -> String {
-    let detailModel = self.viewModelForCell(index: index)
-    return detailModel.primaryTitle!
+  func getPrimaryTextWithIndex(index: Int) -> String {
+    
+    let count = filmModels.count
+    
+    if count > 0 {
+      let detailModel = self.viewModelForCell(index: index)
+      return detailModel.primaryTitle!
+    }
+    return ""
   }
   
-  override func getSecondaryTextWithIndex(index: Int) -> String {
-    let detailModel = self.viewModelForCell(index: index)
-    return detailModel.secondaryTitle!
+  func getSecondaryTextWithIndex(index: Int) -> String {
+    
+    let count = filmModels.count
+    
+    if count > 0 {
+      let detailModel = self.viewModelForCell(index: index)
+      return detailModel.secondaryTitle!
+    }
+    return ""
   }
   
-  override func getNumberOfRowsInSection(section: Int) -> Int {
+  func getNumberOfRowsInSection(section: Int) -> Int {
     return rowsPerSection[section]
   }
   
-  override func getNumberOfSections() -> Int {
+  func getNumberOfSections() -> Int {
     return numberOfSections
   }
   
-  override func getViewControllerForIndex(index: Int) -> UIViewController {
+  func getViewControllerForIndex(index: Int) -> UIViewController {
     let vc = FilmDetailViewController()
     vc.filmModel = self.viewModelForCell(index: index)
     return vc
   }
 }
-
-// Potential - write mu;ltiple view models - one for each screen we want to load
-
-// View model has a dataasource and can switch it out
-// Datasource confirms to a protocol
 

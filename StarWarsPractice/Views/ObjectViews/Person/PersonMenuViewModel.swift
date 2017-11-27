@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonMenuViewModel: ObjectModel, optionsMenuDelegate {
+class PersonMenuViewModel: NSObject, optionsMenuDelegate {
 
   //weak var delegate: optionsViewDelegate?
   var personModels = [PersonDetailViewModel]()
@@ -16,7 +16,7 @@ class PersonMenuViewModel: ObjectModel, optionsMenuDelegate {
   var numberOfSections: Int = 0
   var rowsPerSection: [Int] = [0]
   
-  override func refreshData() {
+  func refreshData(completionHandler: @escaping (NSArray) -> ()) {
     
     StarWarsDataManager.sharedInstance.getObjectsWithType(type: .starWarsTypePeople) { (people) in
       
@@ -32,7 +32,7 @@ class PersonMenuViewModel: ObjectModel, optionsMenuDelegate {
       self.rowsPerSection = [people.count]
       self.numberOfSections = 1
       
-      self.delegate?.refreshView()
+      completionHandler(people)
     }
   }
   
@@ -40,7 +40,7 @@ class PersonMenuViewModel: ObjectModel, optionsMenuDelegate {
     //cellViewModels = cellViewModels.sorted(by: {$0.releaseDateValue!.intValue < $1.releaseDateValue!.intValue})
   }
   
-  override var loadingString: String? {
+  func getLoadingString() -> String {
     return "Loading People..."
   }
   
@@ -48,25 +48,37 @@ class PersonMenuViewModel: ObjectModel, optionsMenuDelegate {
     return personModels[index]
   }
   
-  override func getPrimaryTextWithIndex(index: Int) -> String {
-    let detailModel = self.viewModelForCell(index: index)
-    return detailModel.primaryTitle!
+  func getPrimaryTextWithIndex(index: Int) -> String {
+    
+    let count = personModels.count
+    
+    if count > 0 {
+      let detailModel = self.viewModelForCell(index: index)
+      return detailModel.primaryTitle!
+    }
+    return ""
   }
   
-  override func getSecondaryTextWithIndex(index: Int) -> String {
-    let detailModel = self.viewModelForCell(index: index)
-    return detailModel.secondaryTitle!
+  func getSecondaryTextWithIndex(index: Int) -> String {
+    
+    let count = personModels.count
+    
+    if count > 0 {
+      let detailModel = self.viewModelForCell(index: index)
+      return detailModel.secondaryTitle!
+    }
+    return ""
   }
   
-  override func getNumberOfRowsInSection(section: Int) -> Int {
+  func getNumberOfRowsInSection(section: Int) -> Int {
     return rowsPerSection[section]
   }
   
-  override func getNumberOfSections() -> Int {
+  func getNumberOfSections() -> Int {
     return numberOfSections
   }
   
-  override func getViewControllerForIndex(index: Int) -> UIViewController {
+  func getViewControllerForIndex(index: Int) -> UIViewController {
     let vc = PersonDetailViewController()
     vc.personModel = self.viewModelForCell(index: index)
     return vc
