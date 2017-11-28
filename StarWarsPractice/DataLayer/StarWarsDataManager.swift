@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import PromiseKit
 
 enum starWarsType {
   case starWarsTypePeople
@@ -25,6 +26,30 @@ class StarWarsDataManager: NSObject {
       static let instance = StarWarsDataManager()
     }
     return singleton.instance
+  }
+  
+  // We want to create a promise to get specific objects
+  func getObjects(type: starWarsType) -> Promise<NSArray> {
+    return Promise<NSArray> { fulfill, reject in
+
+      let starWarsUrl = URL(string: self.getUrlForType(type: type))
+
+      return Alamofire.request(starWarsUrl!).responseJSON { response in
+
+        switch(response.result) {
+        case .success( _):
+
+          let json = response.result.value as! NSDictionary
+          // Convert from JSON to an array of dictionaries
+          var array = json["results"] as! NSArray
+          array = self.getObjectsWithTypeAndInfo(type: type, info: array)
+
+          fulfill(array)
+        case .failure(let error):
+          reject(error)
+        }
+      }
+    }
   }
   
   func getObjectsWithType(type: starWarsType, completionHandler: @escaping (NSArray) -> ()) {
@@ -56,7 +81,6 @@ class StarWarsDataManager: NSObject {
     var models: [Any] = []
     
     for dict in info {
-    
       var model = NSObject()
       
       switch type {

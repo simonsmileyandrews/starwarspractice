@@ -29,5 +29,149 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWarsPractice/DataLayer/StarWarsDataManager.swift"
+            timestampString = "533533067.572994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getObjects(type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWarsPractice/Views/ObjectViews/Film/FilmMenuViewModel.swift"
+            timestampString = "533533067.573083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "refreshData(completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StarWarsPractice.FilmMenuViewModel.refreshData(completionHandler: (__ObjC.NSArray) -&gt; ()) -&gt; ()"
+                  moduleName = "StarWarsPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonsmiley-andrews/Documents/Xcode/Test/StarWarsPractice/StarWarsPractice/Views/ObjectViews/Film/FilmMenuViewModel.swift"
+                  timestampString = "533532844.017219"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.NSArray) -&gt; () in StarWarsPractice.FilmMenuViewModel.refreshData(completionHandler: (__ObjC.NSArray) -&gt; ()) -&gt; ()"
+                  moduleName = "StarWarsPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonsmiley-andrews/Documents/Xcode/Test/StarWarsPractice/StarWarsPractice/Views/ObjectViews/Film/FilmMenuViewModel.swift"
+                  timestampString = "533532844.031073"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWarsPractice/DataLayer/StarWarsDataManager.swift"
+            timestampString = "533533067.573673"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getObjects(type:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StarWarsPractice.StarWarsDataManager.getObjects(type: StarWarsPractice.starWarsType) -&gt; PromiseKit.Promise&lt;__ObjC.NSArray&gt;"
+                  moduleName = "StarWarsPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonsmiley-andrews/Documents/Xcode/Test/StarWarsPractice/StarWarsPractice/DataLayer/StarWarsDataManager.swift"
+                  timestampString = "533532844.044513"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((__ObjC.NSArray) -&gt; (), (Swift.Error) -&gt; ()) -&gt; () in StarWarsPractice.StarWarsDataManager.getObjects(type: StarWarsPractice.starWarsType) -&gt; PromiseKit.Promise&lt;__ObjC.NSArray&gt;"
+                  moduleName = "StarWarsPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simonsmiley-andrews/Documents/Xcode/Test/StarWarsPractice/StarWarsPractice/DataLayer/StarWarsDataManager.swift"
+                  timestampString = "533532844.049403"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWarsPractice/DataLayer/StarWarsDataManager.swift"
+            timestampString = "533533067.573793"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getObjects(type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StarWarsPractice/Views/ObjectViews/Film/FilmMenuViewModel.swift"
+            timestampString = "533533067.573895"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "refreshData(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2BA9027C1FCBBB4600774445 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA9027B1FCBBB4600774445 /* NVActivityIndicatorView.framework */; };
+		2BA9027F1FCBC43500774445 /* StarWarsMainMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA9027D1FCBC37100774445 /* StarWarsMainMenuTests.swift */; };
+		2BD2C3911FCCED4A00FF2514 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BD2C3901FCCED4A00FF2514 /* PromiseKit.framework */; };
 		2BF32F311FCBB71A0071B87A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF32F2F1FCBB71A0071B87A /* Alamofire.framework */; };
 		2BF32F321FCBB71A0071B87A /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF32F301FCBB71A0071B87A /* AlamofireImage.framework */; };
 		2BF363931FC62964002BB67A /* StarWarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF363921FC62964002BB67A /* StarWarsViewModel.swift */; };
@@ -59,6 +61,9 @@
 /* Begin PBXFileReference section */
 		05849D4ABB1805697F0D76BB /* Pods-StarWarsPracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsPracticeUITests/Pods-StarWarsPracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2BA9027B1FCBBB4600774445 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		2BA9027D1FCBC37100774445 /* StarWarsMainMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StarWarsMainMenuTests.swift; path = StarWarsPracticeTests/StarWarsMainMenuTests.swift; sourceTree = SOURCE_ROOT; };
+		2BD2C38E1FCCED4200FF2514 /* PromiseKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = PromiseKit.framework.dSYM; path = Carthage/Build/iOS/PromiseKit.framework.dSYM; sourceTree = "<group>"; };
+		2BD2C3901FCCED4A00FF2514 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		2BF32F2F1FCBB71A0071B87A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2BF32F301FCBB71A0071B87A /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		2BF363921FC62964002BB67A /* StarWarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsViewModel.swift; sourceTree = "<group>"; };
@@ -110,6 +115,7 @@
 				2BF32F311FCBB71A0071B87A /* Alamofire.framework in Frameworks */,
 				2BF32F321FCBB71A0071B87A /* AlamofireImage.framework in Frameworks */,
 				2BA9027C1FCBBB4600774445 /* NVActivityIndicatorView.framework in Frameworks */,
+				2BD2C3911FCCED4A00FF2514 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +141,8 @@
 		1500CDFD917F2C081706AD05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BD2C3901FCCED4A00FF2514 /* PromiseKit.framework */,
+				2BD2C38E1FCCED4200FF2514 /* PromiseKit.framework.dSYM */,
 				2BA9027B1FCBBB4600774445 /* NVActivityIndicatorView.framework */,
 				2BF32F2F1FCBB71A0071B87A /* Alamofire.framework */,
 				2BF32F301FCBB71A0071B87A /* AlamofireImage.framework */,
@@ -240,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				2BFCEEF51FC3D6C000480578 /* StarWarsPracticeTests.swift */,
+				2BA9027D1FCBC37100774445 /* StarWarsMainMenuTests.swift */,
 				2BFCEEF71FC3D6C000480578 /* Info.plist */,
 			);
 			path = StarWarsPracticeTests;
@@ -437,6 +446,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 			);
 			outputPaths = (
 			);
@@ -569,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA9027F1FCBC43500774445 /* StarWarsMainMenuTests.swift in Sources */,
 				2BFCEEF61FC3D6C000480578 /* StarWarsPracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

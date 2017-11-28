@@ -2,3 +2,5 @@
 github "Alamofire/Alamofire" == 4.5
 github "Alamofire/AlamofireImage" ~> 3.2
 github "ninjaprox/NVActivityIndicatorView"
+
+github "mxcl/PromiseKit" ~> 4.4
