@@ -9,13 +9,13 @@
 import UIKit
 import Alamofire
 
-enum starWarsType {
-  case starWarsTypePeople
-  case starWarsTypePlanets
-  case starWarsTypeFilms
-  case starWarsTypeSpecies
-  case starWarsTypeVehicles
-  case starWarsTypeStarships
+enum StarWarsType {
+  case People
+  case Planets
+  case Films
+  case Species
+  case Vehicles
+  case Starships
 }
 
 class StarWarsDataManager: NSObject {
