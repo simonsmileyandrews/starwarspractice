@@ -16,52 +16,27 @@ class FilmMenuViewModel: NSObject, optionsMenuDelegate {
   var numberOfSections: Int = 0
   var rowsPerSection: [Int] = [0]
   
-  //func refreshDataPromise(completionHandler: @escaping (NSArray) -> ()) {
-  func refreshData(completionHandler: @escaping (NSArray) -> ()) {
-  
-    weak var weakSelf = self
-    
-    StarWarsDataManager.sharedInstance.getObjects(type: .starWarsTypeFilms).then { films in
+  func refreshData() -> Promise<Any> {
+    return StarWarsDataManager.sharedInstance.getObjects(type: .starWarsTypeFilms).then() {
+      (films: NSArray) -> Void in
       
-      weakSelf?.filmModels = [FilmDetailViewModel]()
+      self.filmModels = [FilmDetailViewModel]()
       
-      //
-      //      for film in films {
-      //        let filmModel = FilmDetailViewModel(film: film as! Film)
-      //        self.filmModels.append(filmModel)
-      //      }
-      //
-      //      self.sortModels()
-      //
-      //      self.rowsPerSection = [films.count]
-      //      self.numberOfSections = 1
-      //
-      //      completionHandler(films)
+      for film in films {
+        let filmModel = FilmDetailViewModel(film: film as! Film)
+        self.filmModels.append(filmModel)
+      }
       
-      print("Hello World")
+      self.sortModels()
+      
+      self.rowsPerSection = [films.count]
+      self.numberOfSections = 1
+    }
+    .catch() {
+      (e: Error) in
+      print("error")
     }
   }
-    
-  
-//  func refreshData(completionHandler: @escaping (NSArray) -> ()) {
-//
-//    StarWarsDataManager.sharedInstance.getObjectsWithType(type: .starWarsTypeFilms) { (films) in
-//
-//      self.filmModels = [FilmDetailViewModel]()
-//
-//      for film in films {
-//        let filmModel = FilmDetailViewModel(film: film as! Film)
-//        self.filmModels.append(filmModel)
-//      }
-//
-//      self.sortModels()
-//
-//      self.rowsPerSection = [films.count]
-//      self.numberOfSections = 1
-//
-//      completionHandler(films)
-//    }
-//  }
 
   func sortModels() {
     filmModels = filmModels.sorted(by: {$0.releaseDateValue!.intValue < $1.releaseDateValue!.intValue})

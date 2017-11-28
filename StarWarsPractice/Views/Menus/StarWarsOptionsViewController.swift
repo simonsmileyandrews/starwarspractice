@@ -8,14 +8,17 @@
 
 import UIKit
 import NVActivityIndicatorView
+import PromiseKit
 
 protocol optionsMenuDelegate: class {
   func getPrimaryTextWithIndex(index: Int) -> String
   func getSecondaryTextWithIndex(index: Int) -> String
-  func refreshData(completionHandler: @escaping (NSArray) -> ())
   func getNumberOfRowsInSection(section: Int) -> Int
   func getViewControllerForIndex(index: Int) -> UIViewController
   func getLoadingString() -> String
+  
+  //func refreshData(completionHandler: @escaping (NSArray) -> ())
+  func refreshData() -> Promise<Any>
 }
 
 class StarWarsOptionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NVActivityIndicatorViewable {
@@ -28,10 +31,16 @@ class StarWarsOptionsViewController: UIViewController, UITableViewDataSource, UI
     super.viewDidLoad()
 
     self.addIndicator()
-    self.delegate?.refreshData(completionHandler: { (objects) in
-      self.removeIndicator()
+    
+    self.delegate?.refreshData().then() {
+      (Any) -> Void in
       self.tableView.reloadData()
-    })
+    }.catch() {
+      (e: Error) in
+      print("Download error")
+    }.always() {
+      self.removeIndicator()
+    }
     
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
   }

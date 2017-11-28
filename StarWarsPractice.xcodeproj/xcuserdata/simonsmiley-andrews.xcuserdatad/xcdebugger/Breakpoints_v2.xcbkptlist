@@ -32,11 +32,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWarsPractice/DataLayer/StarWarsDataManager.swift"
-            timestampString = "533533067.572994"
+            timestampString = "533537554.937735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -51,56 +51,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StarWarsPractice/Views/ObjectViews/Film/FilmMenuViewModel.swift"
-            timestampString = "533533067.573083"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "refreshData(completionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "StarWarsPractice.FilmMenuViewModel.refreshData(completionHandler: (__ObjC.NSArray) -&gt; ()) -&gt; ()"
-                  moduleName = "StarWarsPractice"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonsmiley-andrews/Documents/Xcode/Test/StarWarsPractice/StarWarsPractice/Views/ObjectViews/Film/FilmMenuViewModel.swift"
-                  timestampString = "533532844.017219"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "22">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.NSArray) -&gt; () in StarWarsPractice.FilmMenuViewModel.refreshData(completionHandler: (__ObjC.NSArray) -&gt; ()) -&gt; ()"
-                  moduleName = "StarWarsPractice"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simonsmiley-andrews/Documents/Xcode/Test/StarWarsPractice/StarWarsPractice/Views/ObjectViews/Film/FilmMenuViewModel.swift"
-                  timestampString = "533532844.031073"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "StarWarsPractice/DataLayer/StarWarsDataManager.swift"
-            timestampString = "533533067.573673"
+            timestampString = "533537554.938176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -144,11 +96,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWarsPractice/DataLayer/StarWarsDataManager.swift"
-            timestampString = "533533067.573793"
+            timestampString = "533537554.938457"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -160,16 +112,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StarWarsPractice/Views/ObjectViews/Film/FilmMenuViewModel.swift"
-            timestampString = "533533067.573895"
+            filePath = "StarWarsPractice/DataLayer/StarWarsDataManager.swift"
+            timestampString = "533537554.938766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "refreshData(completionHandler:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getObjects(type:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

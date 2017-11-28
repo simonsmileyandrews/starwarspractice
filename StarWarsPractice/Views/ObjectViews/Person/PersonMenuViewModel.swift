@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class PersonMenuViewModel: NSObject, optionsMenuDelegate {
 
@@ -16,9 +17,9 @@ class PersonMenuViewModel: NSObject, optionsMenuDelegate {
   var numberOfSections: Int = 0
   var rowsPerSection: [Int] = [0]
   
-  func refreshData(completionHandler: @escaping (NSArray) -> ()) {
-    
-    StarWarsDataManager.sharedInstance.getObjectsWithType(type: .starWarsTypePeople) { (people) in
+  func refreshData() -> Promise<Any> {
+    return StarWarsDataManager.sharedInstance.getObjects(type: .starWarsTypePeople).then() {
+      (people: NSArray) -> Void in
       
       self.personModels = [PersonDetailViewModel]()
       
@@ -31,8 +32,10 @@ class PersonMenuViewModel: NSObject, optionsMenuDelegate {
       
       self.rowsPerSection = [people.count]
       self.numberOfSections = 1
-      
-      completionHandler(people)
+      }
+      .catch() {
+        (e: Error) in
+        print("error")
     }
   }
   

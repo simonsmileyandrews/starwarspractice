@@ -30,11 +30,11 @@ class StarWarsDataManager: NSObject {
   
   // We want to create a promise to get specific objects
   func getObjects(type: starWarsType) -> Promise<NSArray> {
-    return Promise<NSArray> { fulfill, reject in
+    return Promise { fulfill, reject in
 
       let starWarsUrl = URL(string: self.getUrlForType(type: type))
 
-      return Alamofire.request(starWarsUrl!).responseJSON { response in
+      Alamofire.request(starWarsUrl!).responseJSON { response in
 
         switch(response.result) {
         case .success( _):
