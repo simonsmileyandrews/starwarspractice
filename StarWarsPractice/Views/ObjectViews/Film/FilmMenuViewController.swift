@@ -23,7 +23,7 @@ class FilmMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell_identifier)
     
     self.addIndicator()
   }
@@ -38,7 +38,7 @@ class FilmMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cell_identifier)
     
     let filmCellModel = viewModel.viewModelForCell(index: indexPath.row)
     

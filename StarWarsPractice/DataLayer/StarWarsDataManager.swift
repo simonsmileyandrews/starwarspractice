@@ -10,21 +10,19 @@ import UIKit
 import Alamofire
 
 enum starWarsType {
-  case starWarsTypePeople
-  case starWarsTypePlanets
-  case starWarsTypeFilms
-  case starWarsTypeSpecies
-  case starWarsTypeVehicles
-  case starWarsTypeStarships
+  case people
+  case planet
+  case film
+  case species
+  case vehicle
+  case starship
 }
 
 class StarWarsDataManager: NSObject {
   
-  class var sharedInstance: StarWarsDataManager {
-    struct singleton {
-      static let instance = StarWarsDataManager()
-    }
-    return singleton.instance
+  static let sharedInstance = StarWarsDataManager()
+  private override init() {
+    // This prevents others from using the default '()' initializer for this class.
   }
   
   func getObjectsWithType(type: starWarsType, completionHandler: @escaping (NSArray) -> ()) {
@@ -42,7 +40,7 @@ class StarWarsDataManager: NSObject {
     }
   }
   
-  public func getJsonFromURL(url: URL, completionHandler: @escaping (NSDictionary) -> ()) {
+  func getJsonFromURL(url: URL, completionHandler: @escaping (NSDictionary) -> ()) {
     
     Alamofire.request(url).responseJSON { response in
       let json = response.result.value as! NSDictionary
@@ -57,22 +55,18 @@ class StarWarsDataManager: NSObject {
     
     for dict in info {
     
-      var model = NSObject()
-      
       switch type {
-      case .starWarsTypePeople  :
-        model = Person(info: dict as! NSDictionary)
-//    case .starWarsTypePlanets  :
-      case .starWarsTypeFilms  :
-        model = Film(info: dict as! NSDictionary)
-//    case .starWarsTypeSpecies  :
-//    case .starWarsTypeVehicles  :
-//    case .starWarsTypeStarships  :
+      case .people:
+        models.append(Person(info: dict as! NSDictionary))
+//    case .planet:
+      case .film:
+        models.append(Film(info: dict as! NSDictionary))
+//    case .species:
+//    case .vehicle:
+//    case .starship:
       default :
         print("")
       }
-      
-      models.append(model)
     }
     
     return models as NSArray
@@ -81,20 +75,18 @@ class StarWarsDataManager: NSObject {
   func getUrlForType(type: starWarsType) -> String {
     
     switch type {
-    case .starWarsTypePeople  :
+    case .people  :
       return "https://swapi.co/api/people/"
-    case .starWarsTypePlanets  :
+    case .planet  :
       return "https://swapi.co/api/planets/"
-    case .starWarsTypeFilms  :
+    case .film  :
       return "https://swapi.co/api/films/"
-    case .starWarsTypeSpecies  :
+    case .species  :
       return "https://swapi.co/api/species/"
-    case .starWarsTypeVehicles  :
+    case .vehicle  :
       return "https://swapi.co/api/vehicles/"
-    case .starWarsTypeStarships  :
+    case .starship  :
       return "https://swapi.co/api/starships/"
     }
   }
-  
-  // We want a delegate method which will refresh the tableView
 }

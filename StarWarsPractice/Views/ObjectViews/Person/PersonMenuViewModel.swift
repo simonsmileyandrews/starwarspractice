@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonMenuViewModel: NSObject, optionsMenuDelegate {
+class PersonMenuViewModel: NSObject, OptionsMenuDelegate {
 
   //weak var delegate: optionsViewDelegate?
   var personModels = [PersonDetailViewModel]()
@@ -18,7 +18,7 @@ class PersonMenuViewModel: NSObject, optionsMenuDelegate {
   
   func refreshData(completionHandler: @escaping (NSArray) -> ()) {
     
-    StarWarsDataManager.sharedInstance.getObjectsWithType(type: .starWarsTypePeople) { (people) in
+    StarWarsDataManager.sharedInstance.getObjectsWithType(type: .people) { (people) in
       
       self.personModels = [PersonDetailViewModel]()
       
@@ -48,7 +48,7 @@ class PersonMenuViewModel: NSObject, optionsMenuDelegate {
     return personModels[index]
   }
   
-  func getPrimaryTextWithIndex(index: Int) -> String {
+  func getPrimaryTextWith(index: Int) -> String {
     
     let count = personModels.count
     
@@ -59,7 +59,7 @@ class PersonMenuViewModel: NSObject, optionsMenuDelegate {
     return ""
   }
   
-  func getSecondaryTextWithIndex(index: Int) -> String {
+  func getSecondaryTextWith(index: Int) -> String {
     
     let count = personModels.count
     
@@ -70,7 +70,7 @@ class PersonMenuViewModel: NSObject, optionsMenuDelegate {
     return ""
   }
   
-  func getNumberOfRowsInSection(section: Int) -> Int {
+  func getNumberOfRowsIn(section: Int) -> Int {
     return rowsPerSection[section]
   }
   
@@ -78,7 +78,7 @@ class PersonMenuViewModel: NSObject, optionsMenuDelegate {
     return numberOfSections
   }
   
-  func getViewControllerForIndex(index: Int) -> UIViewController {
+  func getViewControllerWith(index: Int) -> UIViewController {
     let vc = PersonDetailViewController()
     vc.personModel = self.viewModelForCell(index: index)
     return vc

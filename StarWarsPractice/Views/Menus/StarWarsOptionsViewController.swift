@@ -9,18 +9,18 @@
 import UIKit
 import NVActivityIndicatorView
 
-protocol optionsMenuDelegate: class {
-  func getPrimaryTextWithIndex(index: Int) -> String
-  func getSecondaryTextWithIndex(index: Int) -> String
+protocol OptionsMenuDelegate: class {
+  func getPrimaryTextWith(index: Int) -> String
+  func getSecondaryTextWith(index: Int) -> String
   func refreshData(completionHandler: @escaping (NSArray) -> ())
-  func getNumberOfRowsInSection(section: Int) -> Int
-  func getViewControllerForIndex(index: Int) -> UIViewController
+  func getNumberOfRowsIn(section: Int) -> Int
+  func getViewControllerWith(index: Int) -> UIViewController
   func getLoadingString() -> String
 }
 
 class StarWarsOptionsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NVActivityIndicatorViewable {
 
-  var delegate: optionsMenuDelegate?
+  var delegate: OptionsMenuDelegate?
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -33,26 +33,26 @@ class StarWarsOptionsViewController: UIViewController, UITableViewDataSource, UI
       self.tableView.reloadData()
     })
     
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell_identifier)
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cell_identifier)
     
-    cell.textLabel?.text = delegate?.getPrimaryTextWithIndex(index: indexPath.row)
-    cell.detailTextLabel?.text = delegate?.getSecondaryTextWithIndex(index: indexPath.row)
+    cell.textLabel?.text = delegate?.getPrimaryTextWith(index: indexPath.row)
+    cell.detailTextLabel?.text = delegate?.getSecondaryTextWith(index: indexPath.row)
   
     return cell
   }
     
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return delegate!.getNumberOfRowsInSection(section: section)
+    return delegate!.getNumberOfRowsIn(section: section)
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-    let vc = delegate!.getViewControllerForIndex(index: indexPath.row)
+    let vc = delegate!.getViewControllerWith(index: indexPath.row)
     self.navigationController?.pushViewController(vc, animated: true)
     
     tableView.deselectRow(at: indexPath, animated: true)

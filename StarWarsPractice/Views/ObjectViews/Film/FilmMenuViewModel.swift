@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilmMenuViewModel: NSObject, optionsMenuDelegate {
+class FilmMenuViewModel: NSObject, OptionsMenuDelegate {
   
   var filmModels = [FilmDetailViewModel]()
   
@@ -17,7 +17,7 @@ class FilmMenuViewModel: NSObject, optionsMenuDelegate {
   
   func refreshData(completionHandler: @escaping (NSArray) -> ()) {
     
-    StarWarsDataManager.sharedInstance.getObjectsWithType(type: .starWarsTypeFilms) { (films) in
+    StarWarsDataManager.sharedInstance.getObjectsWithType(type: .film) { (films) in
       
       self.filmModels = [FilmDetailViewModel]()
       
@@ -47,7 +47,7 @@ class FilmMenuViewModel: NSObject, optionsMenuDelegate {
     return filmModels[index]
   }
   
-  func getPrimaryTextWithIndex(index: Int) -> String {
+  func getPrimaryTextWith(index: Int) -> String {
     
     let count = filmModels.count
     
@@ -58,7 +58,7 @@ class FilmMenuViewModel: NSObject, optionsMenuDelegate {
     return ""
   }
   
-  func getSecondaryTextWithIndex(index: Int) -> String {
+  func getSecondaryTextWith(index: Int) -> String {
     
     let count = filmModels.count
     
@@ -69,7 +69,7 @@ class FilmMenuViewModel: NSObject, optionsMenuDelegate {
     return ""
   }
   
-  func getNumberOfRowsInSection(section: Int) -> Int {
+  func getNumberOfRowsIn(section: Int) -> Int {
     return rowsPerSection[section]
   }
   
@@ -77,7 +77,7 @@ class FilmMenuViewModel: NSObject, optionsMenuDelegate {
     return numberOfSections
   }
   
-  func getViewControllerForIndex(index: Int) -> UIViewController {
+  func getViewControllerWith(index: Int) -> UIViewController {
     let vc = FilmDetailViewController()
     vc.filmModel = self.viewModelForCell(index: index)
     return vc

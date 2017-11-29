@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Person: NSObject {
+struct Person {
   var name: String?
   var height: String?
   var mass: String?
@@ -17,6 +17,8 @@ class Person: NSObject {
   var eye_color: String?
   var birth_year: String?
   var gender: String?
+  
+  var type: starWarsType?
   
   init(info: NSDictionary) {
     
@@ -28,6 +30,8 @@ class Person: NSObject {
     self.eye_color = info.value(forKey: "eye_color") as? String
     self.birth_year = info.value(forKey: "birth_year") as? String
     self.gender = info.value(forKey: "gender") as? String
+    
+    self.type = .people
   }
 }
 

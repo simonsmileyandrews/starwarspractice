@@ -25,7 +25,7 @@ class PersonMenuViewController: UIViewController, UITableViewDelegate, UITableVi
       self.addIndicator()
     }
     
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell_identifier)
   }
 
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,7 +38,7 @@ class PersonMenuViewController: UIViewController, UITableViewDelegate, UITableVi
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cell_identifier)
     
     let personCellModel = viewModel.viewModelForCell(index: indexPath.row)
     

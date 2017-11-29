@@ -18,13 +18,13 @@ class PersonDetailViewController: UIViewController, UITableViewDelegate, UITable
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell_identifier)
   }
 
   // We have a single piece of data for each row of the detail
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+    let cell = tableView.dequeueReusableCell(withIdentifier: cell_identifier)
     
     cell?.textLabel?.text = personModel.stringForIndex(index: indexPath.row)
     

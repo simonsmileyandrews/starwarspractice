@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B98BE541FCE288E00142B61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B98BE531FCE288E00142B61 /* Constants.swift */; };
 		2BA9027C1FCBBB4600774445 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA9027B1FCBBB4600774445 /* NVActivityIndicatorView.framework */; };
 		2BF32F311FCBB71A0071B87A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF32F2F1FCBB71A0071B87A /* Alamofire.framework */; };
 		2BF32F321FCBB71A0071B87A /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF32F301FCBB71A0071B87A /* AlamofireImage.framework */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		05849D4ABB1805697F0D76BB /* Pods-StarWarsPracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsPracticeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsPracticeUITests/Pods-StarWarsPracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B98BE531FCE288E00142B61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2BA9027B1FCBBB4600774445 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		2BF32F2F1FCBB71A0071B87A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2BF32F301FCBB71A0071B87A /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				2BF363941FC642CC002BB67A /* StarWarsDataManager.swift */,
+				2B98BE531FCE288E00142B61 /* Constants.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				2BF363A61FC67E58002BB67A /* PersonDetailViewModel.swift in Sources */,
 				2BF3639B1FC66BCE002BB67A /* FilmMenuViewController.swift in Sources */,
 				2BFCEF151FC4E14600480578 /* Film.swift in Sources */,
+				2B98BE541FCE288E00142B61 /* Constants.swift in Sources */,
 				2BF363B81FC77EA7002BB67A /* PersonDetailViewController.swift in Sources */,
 				2BF363951FC642CC002BB67A /* StarWarsDataManager.swift in Sources */,
 				2BF363931FC62964002BB67A /* StarWarsViewModel.swift in Sources */,
