@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Film: NSObject {
+struct Film {
   var title: String?
   var episode_id: Int?
   var opening_crawl: String?
@@ -38,7 +38,7 @@ class Film: NSObject {
     
     self.release_date = info.value(forKey: "release_date") as? String
     
-    self.type = .starWarsTypeFilms
+    self.type = .film
   }
 }
 

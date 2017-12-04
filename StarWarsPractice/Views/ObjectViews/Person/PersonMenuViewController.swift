@@ -9,7 +9,9 @@
 import UIKit
 import NVActivityIndicatorView
 
-class PersonMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, optionsViewDelegate, NVActivityIndicatorViewable {
+// DEPRECIATED
+
+class PersonMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NVActivityIndicatorViewable {
 
   let viewModel = PersonMenuViewModel()
   
@@ -18,15 +20,12 @@ class PersonMenuViewController: UIViewController, UITableViewDelegate, UITableVi
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    viewModel.delegate = self
-    viewModel.refreshData()
-    
     // Check if we have any objects to display
     if viewModel.numberOfSections == 0 {
       self.addIndicator()
     }
     
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cell_identifier)
   }
 
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,7 +38,7 @@ class PersonMenuViewController: UIViewController, UITableViewDelegate, UITableVi
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cell_identifier)
     
     let personCellModel = viewModel.viewModelForCell(index: indexPath.row)
     
